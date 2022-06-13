@@ -26,6 +26,7 @@
 		18D775C722AD944400AE281E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C622AD944400AE281E /* Assets.xcassets */; };
 		18D775CA22AD944400AE281E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C922AD944400AE281E /* Preview Assets.xcassets */; };
 		18D775D822AD963800AE281E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D775DA22AD963800AE281E /* LaunchScreen.storyboard */; };
+		F4020BD42857BAED00101294 /* TripListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4020BD32857BAED00101294 /* TripListInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		18D775C922AD944400AE281E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18D775CE22AD944400AE281E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D775DE22AD96B400AE281E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4020BD32857BAED00101294 /* TripListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,24 +66,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A20EFA9240EA73A00A0CA27 /* WaypointModule */ = {
+		0A8BE47C23ECC55F00C24F52 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0A20EFAA240EA73A00A0CA27 /* WaypointViewPresenter.swift */,
-				0A20EFAB240EA73A00A0CA27 /* WaypointView.swift */,
-				0A20EFAC240EA73A00A0CA27 /* WaypointViewInteractor.swift */,
-			);
-			path = WaypointModule;
-			sourceTree = "<group>";
-		};
-		0A8BE47C23ECC55F00C24F52 /* Functional Views */ = {
-			isa = PBXGroup;
-			children = (
+				F4020BCE2857BA6A00101294 /* Waypoint */,
 				0A83577523D697A300D83533 /* MapView.swift */,
 				0A78DB8D23E799E400934DD4 /* SplitImage.swift */,
 				0A20EFA1240EA70900A0CA27 /* TripListCell.swift */,
 			);
-			path = "Functional Views";
+			path = Views;
 			sourceTree = "<group>";
 		};
 		0A8BE47D23ECC56F00C24F52 /* Entities */ = {
@@ -124,13 +117,15 @@
 		18D775BF22AD944300AE281E /* Viper */ = {
 			isa = PBXGroup;
 			children = (
+				0A8BE47C23ECC55F00C24F52 /* Views */,
+				F4020BCD2857BA5800101294 /* Interactors */,
+				F4020BCC2857BA4800101294 /* Presenters */,
+				0A8BE47D23ECC56F00C24F52 /* Entities */,
+				F4020BD12857BA9700101294 /* Routers */,
 				18D775C022AD944300AE281E /* AppDelegate.swift */,
 				18D775C222AD944300AE281E /* SceneDelegate.swift */,
 				18D775C422AD944300AE281E /* ContentView.swift */,
-				0A8BE47C23ECC55F00C24F52 /* Functional Views */,
-				0A8BE47D23ECC56F00C24F52 /* Entities */,
 				0AEABEDA23EF7E1B00FD3972 /* Data Sources */,
-				0A20EFA9240EA73A00A0CA27 /* WaypointModule */,
 				18D775C622AD944400AE281E /* Assets.xcassets */,
 				18D775DA22AD963800AE281E /* LaunchScreen.storyboard */,
 				0A83577D23D6996E00D83533 /* default.json */,
@@ -146,6 +141,62 @@
 				18D775C922AD944400AE281E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F4020BCC2857BA4800101294 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				F4020BD02857BA8100101294 /* Waypoint */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		F4020BCD2857BA5800101294 /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				F4020BD22857BADE00101294 /* TripList */,
+				F4020BCF2857BA7A00101294 /* Waypoint */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+		F4020BCE2857BA6A00101294 /* Waypoint */ = {
+			isa = PBXGroup;
+			children = (
+				0A20EFAB240EA73A00A0CA27 /* WaypointView.swift */,
+			);
+			path = Waypoint;
+			sourceTree = "<group>";
+		};
+		F4020BCF2857BA7A00101294 /* Waypoint */ = {
+			isa = PBXGroup;
+			children = (
+				0A20EFAC240EA73A00A0CA27 /* WaypointViewInteractor.swift */,
+			);
+			path = Waypoint;
+			sourceTree = "<group>";
+		};
+		F4020BD02857BA8100101294 /* Waypoint */ = {
+			isa = PBXGroup;
+			children = (
+				0A20EFAA240EA73A00A0CA27 /* WaypointViewPresenter.swift */,
+			);
+			path = Waypoint;
+			sourceTree = "<group>";
+		};
+		F4020BD12857BA9700101294 /* Routers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		F4020BD22857BADE00101294 /* TripList */ = {
+			isa = PBXGroup;
+			children = (
+				F4020BD32857BAED00101294 /* TripListInteractor.swift */,
+			);
+			path = TripList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +280,7 @@
 				0A20EFAE240EA73A00A0CA27 /* WaypointView.swift in Sources */,
 				0A83577623D697A300D83533 /* MapView.swift in Sources */,
 				0A20EFA2240EA70900A0CA27 /* TripListCell.swift in Sources */,
+				F4020BD42857BAED00101294 /* TripListInteractor.swift in Sources */,
 				0A83577B23D6996200D83533 /* Persistence.swift in Sources */,
 				0A46782923D7AE980073803D /* Waypoint.swift in Sources */,
 				18D775C322AD944300AE281E /* SceneDelegate.swift in Sources */,
