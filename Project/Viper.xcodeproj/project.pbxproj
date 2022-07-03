@@ -27,6 +27,7 @@
 		18D775CA22AD944400AE281E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D775C922AD944400AE281E /* Preview Assets.xcassets */; };
 		18D775D822AD963800AE281E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D775DA22AD963800AE281E /* LaunchScreen.storyboard */; };
 		F4020BD42857BAED00101294 /* TripListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4020BD32857BAED00101294 /* TripListInteractor.swift */; };
+		F412DB2F2871EE1D00C3C03A /* TripListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F412DB2E2871EE1D00C3C03A /* TripListPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		18D775CE22AD944400AE281E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18D775DE22AD96B400AE281E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4020BD32857BAED00101294 /* TripListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListInteractor.swift; sourceTree = "<group>"; };
+		F412DB2E2871EE1D00C3C03A /* TripListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripListPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		F4020BCC2857BA4800101294 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				F412DB2D2871EDF200C3C03A /* TripList */,
 				F4020BD02857BA8100101294 /* Waypoint */,
 			);
 			path = Presenters;
@@ -195,6 +198,14 @@
 			isa = PBXGroup;
 			children = (
 				F4020BD32857BAED00101294 /* TripListInteractor.swift */,
+			);
+			path = TripList;
+			sourceTree = "<group>";
+		};
+		F412DB2D2871EDF200C3C03A /* TripList */ = {
+			isa = PBXGroup;
+			children = (
+				F412DB2E2871EE1D00C3C03A /* TripListPresenter.swift */,
 			);
 			path = TripList;
 			sourceTree = "<group>";
@@ -281,6 +292,7 @@
 				0A83577623D697A300D83533 /* MapView.swift in Sources */,
 				0A20EFA2240EA70900A0CA27 /* TripListCell.swift in Sources */,
 				F4020BD42857BAED00101294 /* TripListInteractor.swift in Sources */,
+				F412DB2F2871EE1D00C3C03A /* TripListPresenter.swift in Sources */,
 				0A83577B23D6996200D83533 /* Persistence.swift in Sources */,
 				0A46782923D7AE980073803D /* Waypoint.swift in Sources */,
 				18D775C322AD944300AE281E /* SceneDelegate.swift in Sources */,
