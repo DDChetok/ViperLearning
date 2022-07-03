@@ -36,7 +36,8 @@ struct TripListView: View {
             TripListCell(trip: item)
               .frame(height: 240)
           }
-        }
+        }.navigationBarTitle("Roadtrips", displayMode: .inline)
+            .navigationBarItems(trailing: presenter.buildAddNewTripButton())
     }
 
     @ObservedObject var presenter: TripListPresenter
@@ -47,6 +48,8 @@ struct TripListView_Previews: PreviewProvider {
         let model = DataModel.sample
         let interactor = TripListInteractor(model: model)
         let presenter = TripListPresenter(interactor: interactor)
-        return TripListView(presenter: presenter)
+        return NavigationView {
+          TripListView(presenter: presenter)
+        }
     }
 }

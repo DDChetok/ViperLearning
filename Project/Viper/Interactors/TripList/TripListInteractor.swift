@@ -5,4 +5,8 @@ final class TripListInteractor {
     init(model: DataModel) {
         self.model = model
     }
+
+    func addNewTrip() {
+        model.pushNewTrip()
+    }
 }
